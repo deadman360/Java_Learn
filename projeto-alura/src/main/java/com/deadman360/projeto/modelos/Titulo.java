@@ -1,6 +1,6 @@
 package com.deadman360.projeto.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
 
     private  String nome;
     private  int anoLancamento;
@@ -21,6 +21,14 @@ public class Titulo {
     //     this.incluidoNoPlano = incluidoNoPlano;
     //     this.duracaoEmMinutos = duracaoEmMinutos;
     // }
+
+    public Titulo(int anoLancamento, int duracaoEmMinutos, boolean incluidoNoPlano, String nome) {
+        this.anoLancamento = anoLancamento;
+        this.duracaoEmMinutos = duracaoEmMinutos;
+        this.incluidoNoPlano = incluidoNoPlano;
+        this.nome = nome;
+    }
+
 
     //Getters
     public String getNome() {
@@ -86,5 +94,19 @@ public class Titulo {
     }
     public  double getMedia(){
         return somaAvaliacoes / totalDeAvaliacoes;
+    }
+
+    @Override
+    public String toString() {
+        return "Filme: %s\nAno de lançamento: %d\n".formatted(this.nome, this.anoLancamento);
+    }
+    public int compareTo(Titulo titulo){
+        if (this.getAnoLancamento() < titulo.getAnoLancamento()){
+            return -1;
+        }
+        if (this.getAnoLancamento() > titulo.getAnoLancamento()){
+            return 1;
+        }
+        return 0;
     }
 }
