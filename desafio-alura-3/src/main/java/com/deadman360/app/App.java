@@ -33,6 +33,10 @@ public class App
         switch (opt) {
             case 1:
                 Compra novaCompra = cartao.compra();
+                if (novaCompra.getValor() == 0){
+                    System.out.println("Saldo insuficiente");
+                    break;
+                }
                 compras.put(novaCompra.getCompra(), novaCompra.getValor());
                 break;
             // case 2:

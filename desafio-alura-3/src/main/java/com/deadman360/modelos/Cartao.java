@@ -33,7 +33,6 @@ public class Cartao {
         System.out.println("Quanto custa?");
         valor = scan.nextDouble();
         if (this.limite < valor){
-            System.out.println("Saldo insuficiente!");
             return new Compra("", 0);
         }
         this.limite -= valor;
