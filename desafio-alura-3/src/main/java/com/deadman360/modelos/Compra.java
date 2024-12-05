@@ -2,8 +2,8 @@ package com.deadman360.modelos;
 
 public class Compra {
 
-    private String compra;
-    private double valor;
+    private final String compra;
+    private final double valor;
 
     public Compra(String compra, double valor) {
         this.compra = compra;

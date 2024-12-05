@@ -1,13 +1,17 @@
 package com.deadman360.projeto.modelos;
 
-public class Titulo implements Comparable<Titulo> {
+import com.google.gson.annotations.SerializedName;
 
+public class Titulo implements Comparable<Titulo> {
+    @SerializedName("Title")
     private  String nome;
+    @SerializedName("Year")
     private  int anoLancamento;
     private boolean incluidoNoPlano;
     private double avaliacao;
     private double somaAvaliacoes;
     private int totalDeAvaliacoes;
+    //  @SerializedName("Runtime")
     private int duracaoEmMinutos;
 
     // public Titulo(
