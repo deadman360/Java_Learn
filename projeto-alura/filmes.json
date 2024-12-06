@@ -1,0 +1,65 @@
+[
+  {
+    "Nome": "Matrix",
+    "AnoLancamento": 1993,
+    "IncluidoNoPlano": false,
+    "Avaliacao": 0.0,
+    "SomaAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 60
+  },
+  {
+    "Nome": "Top Gun",
+    "AnoLancamento": 1986,
+    "IncluidoNoPlano": false,
+    "Avaliacao": 0.0,
+    "SomaAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 109
+  },
+  {
+    "Nome": "Dogville",
+    "AnoLancamento": 2003,
+    "IncluidoNoPlano": false,
+    "Avaliacao": 0.0,
+    "SomaAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 178
+  },
+  {
+    "Nome": "Marmaduke",
+    "AnoLancamento": 2010,
+    "IncluidoNoPlano": false,
+    "Avaliacao": 0.0,
+    "SomaAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 87
+  },
+  {
+    "Nome": "Blade Runner",
+    "AnoLancamento": 1982,
+    "IncluidoNoPlano": false,
+    "Avaliacao": 0.0,
+    "SomaAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 117
+  },
+  {
+    "Nome": "The Avengers",
+    "AnoLancamento": 2012,
+    "IncluidoNoPlano": false,
+    "Avaliacao": 0.0,
+    "SomaAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 143
+  },
+  {
+    "Nome": "Sair",
+    "AnoLancamento": 2020,
+    "IncluidoNoPlano": false,
+    "Avaliacao": 0.0,
+    "SomaAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 99
+  }
+]

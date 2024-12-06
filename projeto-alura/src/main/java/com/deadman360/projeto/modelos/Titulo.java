@@ -1,11 +1,9 @@
 package com.deadman360.projeto.modelos;
 
-import com.google.gson.annotations.SerializedName;
+import com.deadman360.projeto.exceptions.ErroDeConversao;
 
 public class Titulo implements Comparable<Titulo> {
-    @SerializedName("Title")
     private  String nome;
-    @SerializedName("Year")
     private  int anoLancamento;
     private boolean incluidoNoPlano;
     private double avaliacao;
@@ -32,7 +30,17 @@ public class Titulo implements Comparable<Titulo> {
         this.incluidoNoPlano = incluidoNoPlano;
         this.nome = nome;
     }
+    //Json constructor
 
+    public Titulo(TituloOmdb tituloTmp){
+        if(tituloTmp.year().length() > 4){
+            throw new ErroDeConversao("Ano invalido");
+        }
+        this.nome = tituloTmp.title();
+        this.anoLancamento = Integer.valueOf(tituloTmp.year().replaceAll(
+            "[^\\d]", ""));
+        this.duracaoEmMinutos = Integer.valueOf(tituloTmp.runtime().replaceAll("[^\\d]", ""));
+    }
 
     //Getters
     public String getNome() {
@@ -102,7 +110,7 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString() {
-        return "Filme: %s\nAno de lançamento: %d\n".formatted(this.nome, this.anoLancamento);
+        return "{\nFilme: %s,\nAno de lançamento: %d,\nTempo de duração: %d min\n}".formatted(this.nome, this.anoLancamento,this.duracaoEmMinutos);
     }
     public int compareTo(Titulo titulo){
         if (this.getAnoLancamento() < titulo.getAnoLancamento()){

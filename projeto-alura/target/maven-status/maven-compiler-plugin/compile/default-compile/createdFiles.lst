@@ -1,1 +1,11 @@
 com/deadman360/App.class
+com/deadman360/Main.class
+com/deadman360/projeto/modelos/Filme.class
+com/deadman360/projeto/modelos/Titulo.class
+com/deadman360/projeto/exceptions/ErroDeConversao.class
+com/deadman360/projeto/modelos/Episodios.class
+com/deadman360/projeto/caclulos/CalculadoraDeTempo.class
+com/deadman360/projeto/modelos/Serie.class
+com/deadman360/projeto/modelos/TituloOmdb.class
+com/deadman360/projeto/caclulos/Classificavel.class
+com/deadman360/projeto/caclulos/Recomendacao.class
