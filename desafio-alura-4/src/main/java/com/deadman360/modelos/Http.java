@@ -6,6 +6,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+import com.google.gson.JsonObject;
+
 public class Http {
 
     private HttpClient client;
@@ -25,18 +27,23 @@ public class Http {
     //Setter
     public void setRequest(String cep) {
         HttpRequest r = HttpRequest.newBuilder()
-        .uri(URI.create("https://viacep.com.br/ws"+ cep +"json/"))
+        .uri(URI.create("https://viacep.com.br/ws/"+ cep +"/json/"))
         .build();
         this.request = r;
     }
     //Methods
-    public getJson() throws InterruptedException{
+    public String getJson() throws InterruptedException, IOException{
         
-        try{HttpResponse<String> response = client
+        try{
+            HttpResponse<String> response = client
         .send(this.request, HttpResponse.BodyHandlers.ofString());
-        }catch(IOException e) {
-            System.out.println("ocorreu um erro");
-        }
+        return response.body();
+    }catch(Exception e){
+        System.out.println("Cep Inválido!");
+        return new JsonObject().toString();
+    }
+        
+        
     }
 
 }

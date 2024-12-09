@@ -1,2 +1,4 @@
 com/deadman360/App.class
 com/deadman360/modelos/Http.class
+com/deadman360/modelos/Cep.class
+com/deadman360/modelos/Local.class
